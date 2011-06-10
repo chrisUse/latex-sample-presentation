@@ -1,0 +1,142 @@
+% http://www2.informatik.hu-berlin.de/~mischulz/beamer.html
+%
+% Erzeugung: latex, latex, dvi2ps, viewps
+%
+%\documentclass[notes,xcolor=dvipsnames,14pt]{beamer}
+\documentclass[xcolor=dvipsnames,14pt]{beamer}
+%\documentclass[xcolor=dvipsnames,14pt,handout]{beamer}
+
+\usecolortheme[named=Gray]{structure}
+% {Apricot | Aquamarine | Bittersweet | Black | Blue | BlueGreen | BlueViolet | BrickRed | Brown | BurntOrange | CadetBlue | CarnationPink | Cerulean | CornowerBlue | Cyan | Dandelion | DarkOrchid | Emerald | ForestGreen | Fuchsia | Goldenrod | Gray | Green | GreenYellow | JungleGreen | Lavender | LimeGreen | Magenta | Mahogany | Maroon | Melon | MidnightBlue | Mulberry | NavyBlue | OliveGreen | Orange | OrangeRed | Orchid | Peach | Periwinkle | PineGreen | Plum | ProcessBlue | Purple | RawSienna | Red | RedOrange | RedViolet | Rhodamine | aRoyalBlue | RoyalPurple | RubineRed | Salmon | SeaGreen | Sepia | SkyBlue | SpringGreen | Tan | TealBlue | Thistle | Turquoise | Violet | VioletRed | White | WildStrawberry | Yellow | YellowGreen | YellowOrange}
+\usepackage{floatflt}
+\usepackage{wrapfig}
+\usepackage{beamerthemesplit} % kam neu dazu
+
+ % \usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{listings}
+
+%\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} 
+
+\lstset{framexleftmargin=100mm,numbers=left, numberstyle=\tiny, numbersep=1pt, xleftmargin=10pt, tabsize=1}
+
+\lstset{language=Haskell} 
+%
+%\usepackage[utf8x]{inputenc}
+%\usepackage{babel}
+% sorgt dafuer, dass kopierbare umlaute eingefuegt werden.
+ % \usepackage[T1]{fontenc}
+
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8x]{inputenc}
+
+%-------------------------------------------------------------------Captions
+
+ \usepackage[small, bf, format=hang]{caption}
+ \usepackage[babel,german=guillemets]{csquotes}
+ \renewcommand{\captionfont}{\tiny}
+ \captionsetup[figure]{labelfont=bf,textfont=it, labelfont={color=gray}}
+ \captionsetup[table]{labelfont=bf,textfont=it, labelfont={color=gray}}
+%------------------------------------------------------------------------------
+%\usepackage{graphicx}
+%\usepackage{epsfig}
+
+\usepackage{graphicx}
+%\usepackage{graphics}
+%\usepackage{epsf}
+%\usepackage{epsfig}
+
+\definecolor{violett}{rgb}{0.800,0.2,0.850}
+\definecolor{lightBlue}{rgb}{0,0.4,0.7}
+\definecolor{darkGreen}{rgb}{0.0,0.6,0.0}
+
+% \usetheme{Antibes}      % schlichte gerade ecken, sehr dezent
+% \usetheme{Berlin}       % kein groeﬂerer unterschied zu Antibes
+% \usetheme{boxes}        % kein groeﬂerer unterschied zu Antibes
+% \usetheme{default}      % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Dresden}      % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Luebeck}      % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Malmoe}       % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Montpellier}  % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Pittsburgh}   % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Rochester}    % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Szeged}       % kein groeﬂerer unterschied zu Antibes
+% \usetheme{Bergen}       % Tehmen leiste links, als groﬂer balken
+% \usetheme{Berkeley}     % Navigations leiste am linken rand, sauber und uebersichtlich
+% \usetheme{Boadilla}     % klares aussehen, ohne leisten oben
+% \usetheme{CambridgeUS}  % 3D ausehen
+% \usetheme{Copenhagen}   % 3D ausehen ohne schatten
+% \usetheme{Darmstadt}    % 3D ausehen
+% \usetheme{Frankfurt}    % 3D ausehen
+% \usetheme{AnnArbor}     % 3D ausehen
+% \usetheme{Ilmenau}      % 3D ausehen ohne schatten runde ecken
+% \usetheme{JuanLesPins}  % 3D ausehen
+% \usetheme{Madrid}       % 3D ausehen, ohne leiste oben
+% \usetheme{PaloAlto}     % 3D ausehen Navigationsleiste links
+% \usetheme{Warsaw}       % 3D ausehen
+% \usetheme{Goettingen}   % Schlicht Navigationsleiste rechts.
+% \usetheme{Hannover}     % Navigations leiste am linken rand, sauber und uebersichtlich
+% \usetheme{Marburg}      % Schlicht Navigationsleiste rechts.
+% \usetheme{Singapore}    % schlicht, Titel mittig zentriert, aufgeraeumt
+
+\usetheme[headheight=1cm,footheight=3cm]{boxes}
+
+
+% Hier wird eine mˆgliche Variante verwendet.
+
+% outer-color-themes: Namen von Seetieren: whale, seahorse, dolphin
+ \usecolortheme{dolphin}    % .., weiﬂ, grau
+% \usecolortheme{albatross}  % .., blau, dunkelblau
+% \usecolortheme{beaver}     % weiﬂer hintergrund, roter titel, grau unten
+% \usecolortheme{beetle}     % .., grau, blau
+% \usecolortheme{crane}      % weiﬂer hintergrund, gelbe kaesten
+% \usecolortheme{default}    % .., weiﬂ, grau
+% \usecolortheme{dove}       % weiﬂ
+% \usecolortheme{fly}        % grau
+% \usecolortheme{lily}       % .., weiﬂ, grau
+% \usecolortheme{orchid}     % .., weiﬂ, grau
+% \usecolortheme{rose}       % .., weiﬂ, grau
+% \usecolortheme{seagull}    % .., weiﬂ, grau
+% \usecolortheme{seahorse}   % .., weiﬂ, grau
+% \usecolortheme{sidebartab} % .., weiﬂ, grau
+% \usecolortheme{structure}  % .., weiﬂ, grau
+% \usecolortheme{whale}      % .., weiﬂ, grau
+%\usecolortheme{wolverine}   % weiﬂ, gelb, blau
+
+% inner-color-themes: Namen von Blumen: lily, orchid, rose
+\usecolortheme{rose}
+
+% Theme f¸r Schriften - es gibt noch weitere
+\usefonttheme{professionalfonts}
+
+% inner-theme
+%\useinnertheme{default}
+\useinnertheme{rectangles}
+
+
+% outer-theme
+\useoutertheme{infolines}
+
+\include{init/globaleVariablen}
+
+\newcommand{\Name}[1]{\textit{\glqq#1\grqq}}
+
+\begin{document}
+
+ \frame{\titlepage}  
+
+ \frame[allowframebreaks]{
+  \frametitle{Inhaltsverzeichnis}
+  \tableofcontents
+ }
+
+
+ \include{eampleFrame}
+
+ 
+\end{document}
+
